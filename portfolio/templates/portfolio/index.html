@@ -1,0 +1,117 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Jebin Philipose</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <!-- Materialize imports -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <!-- Preloader begin -->
+    <div class="loader" id="preloader">
+        <div class="loader-inner">
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader end -->
+
+    <div id="wrapper">
+        <header>
+            <!-- Navbar begin -->
+            <nav class="transparent z-depth-0">
+                <div class="container">
+                    <div class="nav-wrapper">
+                        <a href="#" class="logo left">
+                            <img src="{% static 'images/logo.png' %}" alt="logo" id="logo-image">
+                        </a>
+                        <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-med-and-up right" id="sidenav-hamburger">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                        <ul class="right hide-on-small-only">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">About</a>
+                            </li>
+                            <li>
+                                <a href="#">Projects</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                            <li>
+                                <a href="#">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Navbar begin -->
+
+            <!-- Sidenav begin -->
+            <ul id="slide-out" class="sidenav">
+                <a href="#" class="sidenav-close right" id="sidenav-close">&times;</a>
+                <li style="margin-top: 89px;">
+                    <a href="#" class="center-align">Home</a>
+                </li>
+                <li>
+                    <a href="#" class="center-align">About</a>
+                </li>
+                <li>
+                    <a href="#" class="center-align">Projects</a>
+                </li>
+                <li>
+                    <a href="#" class="center-align">Contact</a>
+                </li>
+                <li>
+                    <a href="#" class="center-align">Blog</a>
+                </li>
+            </ul>
+            <!-- Sidenav end -->
+        </header>
+    </div>
+
+    <!-- Custom Javascript File -->
+    <script src="{% static 'js/app.js' %}"></script>
+    <!-- Javascript for Sidenav -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, {
+                edge: 'right',
+            });
+        });
+    </script>
+</body>
+
+</html>
