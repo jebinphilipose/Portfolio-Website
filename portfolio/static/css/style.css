@@ -130,13 +130,14 @@ html {
     box-sizing: inherit;
 }
 
+html,
 body {
     margin: 0px;
     padding: 0px;
 }
 
 #logo-image {
-    height: 52px; 
+    height: 52px;
     width: 52px;
 }
 
@@ -145,9 +146,10 @@ body {
 }
 
 #slide-out {
-    width: 100%; 
-    background-color: rgba(17,17,17,1);
-
+    width: 100%;
+    background-color: #222;
+    display: flex;
+    align-items: center;
 }
 
 #sidenav-hamburger {
@@ -158,6 +160,10 @@ body {
     font-size: 50px;
     margin-top: 3px;
     padding-right: 10px;
+}
+
+#sidenav-items {
+    width: 100%;
 }
 
 .sidenav li {
@@ -172,25 +178,29 @@ body {
     background-color: transparent;
 }
 
-.sidenav li:hover, .sidenav li:focus {
+.sidenav li:hover,
+.sidenav li:focus {
     background-color: #E4B363;
 }
 
-.sidenav li>a:hover, .sidenav li>a:focus {
+.sidenav li>a:hover,
+.sidenav li>a:focus {
     background-color: transparent;
 }
 
 nav {
-    height: 60px;
-    padding-top: 20px; 
+    height: 80px;
+    padding-top: 20px;
 }
 
 nav li>a {
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
+    font-weight: 600;
 }
 
-nav li>a:hover, nav li>a:focus {
+nav li>a:hover,
+nav li>a:focus {
     background-color: transparent;
 }
 
@@ -204,8 +214,88 @@ nav li>a:hover, nav li>a:focus {
 }
 
 header {
-    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../images/background.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/background.jpg');
     background-size: cover;
     background-position: center center;
     height: 100vh;
+}
+
+#hero {
+    color: #fff;
+    height: calc(100vh - 84px);
+    width: 100%;
+}
+
+#hero .container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#type {
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.typed-cursor {
+    opacity: 1;
+    font-size: 1.5rem;
+    animation: blink .5s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#hero ul {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+#hero ul>li {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 4rem;
+}
+
+#hero ul>li>a {
+    color: inherit;
+}
+
+#scroll-btn {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 601px) {
+    #hero h1 {
+        font-size: 5rem;
+        font-weight: 900;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #hero h1 {
+        font-size: 2.5rem;
+        font-weight: 900;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #hero ul>li {
+        margin: 0 10px;
+        font-size: 2rem;
+    }
 }
