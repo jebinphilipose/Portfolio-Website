@@ -17,7 +17,7 @@ $(window).on('load', function () {
     setTimeout(function () {
         var typed = new Typed('#type', {
             strings: [
-                "Hi, I'm Jebin Philipose ;)",
+                "Hi, I'm Jebin Philipose <span>&semi;)</span>",
                 "I am a computer science engineering student",
                 "I am a self made Web Developer",
                 "I love <i class='fas fa-code'></i>",
