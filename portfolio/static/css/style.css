@@ -154,12 +154,13 @@ body {
 
 #sidenav-hamburger {
     margin-right: 0px;
+    height: auto;
 }
 
 #sidenav-close {
     font-size: 50px;
-    margin-top: 3px;
-    padding-right: 10px;
+    margin-top: -15px;
+    padding-right: 15px;
 }
 
 #sidenav-items {
@@ -189,19 +190,27 @@ body {
 }
 
 nav {
-    height: 80px;
     padding-top: 20px;
+    overflow: hidden;
+    background-color: transparent !important;
 }
 
 nav li>a {
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     font-weight: 600;
+    padding: 0 0;
+    margin: 0 20px;
+    height: 52px;
 }
 
 nav li>a:hover,
 nav li>a:focus {
     background-color: transparent;
+}
+
+nav li>a:focus {
+    border-bottom: 4px solid red;
 }
 
 .logo {
@@ -222,15 +231,15 @@ header {
 
 #hero {
     color: #fff;
-    height: calc(100vh - 84px);
+    height: calc(100vh - 183.15px);
     width: 100%;
-}
-
-#hero .container {
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#hero .container {
+    height: fit-content;
 }
 
 #type {
@@ -289,16 +298,24 @@ header {
 }
 
 @media screen and (max-width: 600px) {
+    nav {
+        padding-top: 0px;
+    }
+    #logo-image {
+        height: 44px;
+        width: 44px;
+    }
+    #hero {
+        height: calc(100vh - 172.47px);
+    }
     #hero h1 {
         font-size: 2.5rem;
         font-weight: 900;
     }
-
     #hero ul>li {
         margin: 0 7.5px;
         font-size: 1.8rem;
     }
-
     #type {
         font-size: 1.0rem;
     }

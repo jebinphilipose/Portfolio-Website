@@ -19,7 +19,7 @@ $(window).on('load', function () {
             strings: [
                 "Hi, I'm Jebin Philipose <span>&semi;)</span>",
                 "I am a computer science engineering student",
-                "I am a self made Web Developer",
+                "I am a self-made Full Stack Web Developer",
                 "I love <i class='fas fa-code'></i>",
                 "Start scrolling to learn more about me",
             ],
