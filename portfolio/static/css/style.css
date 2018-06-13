@@ -293,11 +293,13 @@ header {
         font-size: 2.5rem;
         font-weight: 900;
     }
-}
 
-@media screen and (max-width: 600px) {
     #hero ul>li {
-        margin: 0 10px;
-        font-size: 2rem;
+        margin: 0 7.5px;
+        font-size: 1.8rem;
+    }
+
+    #type {
+        font-size: 1.0rem;
     }
 }
