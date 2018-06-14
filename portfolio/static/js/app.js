@@ -31,3 +31,18 @@ $(window).on('load', function () {
     }, 2000);
 });
 /* Script for typing effect begin */
+
+/* Smooth scroll to a section begin */
+$(document).ready(function () {
+    $("header a").click(function (event) {
+        event.preventDefault();
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top
+            }, 1000);
+        }
+
+    });
+});
+/* Smooth scroll to a section end */
