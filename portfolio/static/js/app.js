@@ -1,4 +1,4 @@
-/* Preloader Script begin */
+/* Script for preloader begin */
 var preloader = document.getElementById('preloader');
 
 window.addEventListener('load', function () {
@@ -10,7 +10,16 @@ window.addEventListener('load', function () {
         document.getElementById("preloader").remove();
     }, 3000);
 });
-/* Preloader Script end */
+/* Script for preloader end */
+
+/* Script for sidenav begin */
+document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, {
+        edge: 'right',
+    });
+});
+/* Script for sidenav end */
 
 /* Script for typing effect begin */
 $(window).on('load', function () {
@@ -34,15 +43,55 @@ $(window).on('load', function () {
 
 /* Smooth scroll to a section begin */
 $(document).ready(function () {
-    $("header a").click(function (event) {
+    $("nav li a, .sidenav a, #scroll-btn li a").click(function (event) {
         event.preventDefault();
-        var target = $(this.getAttribute('href'));
-        if (target.length) {
-            $('html, body').stop().animate({
-                scrollTop: target.offset().top
-            }, 1000);
+        var url = this.getAttribute('href');
+        if (url !== '#') {
+            var offset = 64;
+            if ($(url).length) {
+                $('html, body').stop().animate({
+                    scrollTop: $(url).offset().top - offset
+                }, 1000);
+            }
         }
-
     });
 });
 /* Smooth scroll to a section end */
+
+/* Script for animated scolling navbar begin */
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(document).scrollTop() >= 42.400001525878906) {
+            $('nav').addClass('shrink');
+        } else {
+            $('nav').removeClass('shrink');
+        }
+    });
+
+    $(window).scroll(function () {
+        var currentLocation = window.pageYOffset;
+        var navLinks = $("nav li a");
+        var offset = 64;
+        navLinks.each(function () {
+            var url = this.getAttribute('href');
+            if (url !== '#') {
+                var sectionOffset = $(url).offset().top - offset;
+                if (sectionOffset <= currentLocation) {
+                    $(this).addClass('active');
+                    $(this).parent().siblings().children().removeClass('active');
+                }
+            }
+        });
+    });
+    // Sidenav close button position change on scroll for mobile devices
+    if (window.matchMedia('(max-width: 600px)').matches) {
+        $(window).scroll(function () {
+            if ($(document).scrollTop() >= 42.400001525878906) {
+                $('#sidenav-close').css('top', '-20px');
+            } else {
+                $('#sidenav-close').css('top', '0');
+            }
+        });
+    }
+});
+/* Script for animated scolling navbar end */

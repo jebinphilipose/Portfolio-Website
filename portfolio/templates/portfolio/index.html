@@ -7,18 +7,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Favicon -->
     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lora|Oswald" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
-    <!-- Materialize imports -->
+    <!-- Materialize CSS CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-    <!-- jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
@@ -50,40 +47,42 @@
     <div id="wrapper">
         <header id="home">
             <!-- Navbar begin -->
-            <nav class="z-depth-0 nav-extended">
-                <div class="container">
-                    <div class="nav-wrapper">
-                        <a href="#" class="logo left">
-                            <img src="{% static 'images/logo.png' %}" alt="logo" id="logo-image">
-                        </a>
-                        <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-med-and-up right" id="sidenav-hamburger">
-                            <i class="fas fa-bars" style="font-size: 30px;"></i>
-                        </a>
-                        <ul class="right hide-on-small-only">
-                            <li>
-                                <a href="#home">Home</a>
-                            </li>
-                            <li>
-                                <a href="#about">About</a>
-                            </li>
-                            <li>
-                                <a href="#">Projects</a>
-                            </li>
-                            <li>
-                                <a href="#">Contact</a>
-                            </li>
-                            <li>
-                                <a href="#">Blog</a>
-                            </li>
-                        </ul>
+            <div class="navbar-fixed">
+                <nav class="z-depth-0 nav-extended pushpin">
+                    <div class="container">
+                        <div class="nav-wrapper">
+                            <a href="/" class="logo left">
+                                <img src="{% static 'images/logo.png' %}" alt="logo" id="logo-image">
+                            </a>
+                            <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-med-and-up right" id="sidenav-hamburger">
+                                <i class="fas fa-bars" style="font-size: 30px;"></i>
+                            </a>
+                            <ul class="right hide-on-small-only">
+                                <li>
+                                    <a href="#home" class="active">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#about">About</a>
+                                </li>
+                                <li>
+                                    <a href="#">Projects</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact</a>
+                                </li>
+                                <li>
+                                    <a href="#" style="margin-right: 0px;">Blog</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
             <!-- Navbar begin -->
 
             <!-- Sidenav begin -->
             <ul id="slide-out" class="sidenav">
-                <a href="#" class="sidenav-close right" id="sidenav-close" style="position: absolute; top: 0; right: 0;">&times;</a>
+                <a href="#" class="sidenav-close right" id="sidenav-close">&times;</a>
                 <div id="sidenav-items">
                     <li>
                         <a href="#home" class="center-align sidenav-close">Home</a>
@@ -206,37 +205,37 @@
                                             just a template. My primary tool for back-end is Python/Flask/Django and its
                                             associated stack: PostgreSQL, Gunicorn, Nginx.</p>
                                         <ul class="collection">
-                                            <li class="collection-item" style="background-color: #FCFAF7;">
+                                            <li class="collection-item" style="background-color: #F3F3F3;">
                                                 <p class="inner-section-content-small">C / C++</p>
                                                 <div class="progress">
                                                     <div class="determinate indigo" style="width: 90%;"></div>
                                                 </div>
                                             </li>
-                                            <li class="collection-item" style="background-color: #FCFAF7;">
+                                            <li class="collection-item" style="background-color: #F3F3F3;">
                                                 <p class="inner-section-content-small">Python</p>
                                                 <div class="progress">
                                                     <div class="determinate indigo" style="width: 90%;"></div>
                                                 </div>
                                             </li>
-                                            <li class="collection-item" style="background-color: #FCFAF7;">
+                                            <li class="collection-item" style="background-color: #F3F3F3;">
                                                 <p class="inner-section-content-small">Front-End (HTML, CSS, JS, Materialize, Bootstrap, jQuery, AJAX)</p>
                                                 <div class="progress">
                                                     <div class="determinate indigo" style="width: 80%;"></div>
                                                 </div>
                                             </li>
-                                            <li class="collection-item" style="background-color: #FCFAF7;">
+                                            <li class="collection-item" style="background-color: #F3F3F3;">
                                                 <p class="inner-section-content-small">Back-End (Python/Flask/Django, PostgreSQL, Gunicorn, Nginx)</p>
                                                 <div class="progress">
                                                     <div class="determinate indigo" style="width: 90%;"></div>
                                                 </div>
                                             </li>
-                                            <li class="collection-item" style="background-color: #FCFAF7;">
+                                            <li class="collection-item" style="background-color: #F3F3F3;">
                                                 <p class="inner-section-content-small">LAMP (Linux, Apache, MySQL, Python) Stack</p>
                                                 <div class="progress">
                                                     <div class="determinate indigo" style="width: 90%;"></div>
                                                 </div>
                                             </li>
-                                            <li class="collection-item" style="background-color: #FCFAF7;">
+                                            <li class="collection-item" style="background-color: #F3F3F3;">
                                                 <p class="inner-section-content-small">Version Control (Git)</p>
                                                 <div class="progress">
                                                     <div class="determinate indigo" style="width: 90%;"></div>
@@ -251,7 +250,7 @@
                                     <div class="card-content">
                                         <h4 class="center-align inner-section-heading">Education</h4>
                                         <ul class="collection">
-                                            <li class="collection-item" style="background-color: #FCFAF7;">
+                                            <li class="collection-item" style="background-color: #F3F3F3;">
                                                 <span class="inner-section-content-small" style="font-weight: bold;">
                                                     <i class="fa fa-university"></i> Bachelor of Engineering (Computer Science)
                                                 </span>
@@ -260,7 +259,7 @@
                                                 <span class="inner-section-content-small" style="font-style: italic;">Chitkara University, Punjab
                                                     <br>(2016-present)</span>
                                             </li>
-                                            <li class="collection-item" style="background-color: #FCFAF7;">
+                                            <li class="collection-item" style="background-color: #F3F3F3;">
                                                 <span class="inner-section-content-small" style="font-weight: bold;">
                                                     <i class="fa fa-graduation-cap"></i> Full Stack Web Developer Nanodegree
                                                 </span>
@@ -280,20 +279,15 @@
         </section>
     </div>
 
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!-- Materialize JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <!-- typed.js -->
     <script src="{% static 'js/typed.min.js' %}"></script>
-
     <!-- Custom Javascript File -->
     <script src="{% static 'js/app.js' %}"></script>
-    <!-- Javascript for Sidenav -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.sidenav');
-            var instances = M.Sidenav.init(elems, {
-                edge: 'right',
-            });
-        });
-    </script>
 </body>
 
 </html>

@@ -158,9 +158,12 @@ body {
 }
 
 #sidenav-close {
+    position: absolute; 
+    top: 0; 
+    right: 0;
     font-size: 50px;
-    margin-top: -15px;
-    padding-right: 15px;
+    margin-top: 4px;
+    padding-right: 14px;
 }
 
 #sidenav-items {
@@ -190,6 +193,7 @@ body {
 }
 
 nav {
+    transition: all 0.3s ease-out;
     padding-top: 20px;
     overflow: hidden;
     background-color: transparent !important;
@@ -209,7 +213,11 @@ nav li>a:focus {
     background-color: transparent;
 }
 
-nav li>a:focus {
+nav li>a:hover {
+    color: rgba(255, 255, 255, .5);
+}
+
+nav li>a.active {
     border-bottom: 4px solid red;
 }
 
@@ -325,6 +333,12 @@ header {
     font-family: 'Lora', serif;
 }
 
+.shrink {
+    opacity: 0.95;
+    padding-top: 0px;
+    background-color: #000 !important;
+}
+
 @media screen and (min-width: 601px) {
     #hero h1 {
         font-size: 5rem;
@@ -333,9 +347,6 @@ header {
 }
 
 @media screen and (max-width: 600px) {
-    nav {
-        padding-top: 0px;
-    }
     #logo-image {
         height: 44px;
         width: 44px;
