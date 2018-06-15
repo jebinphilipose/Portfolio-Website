@@ -84,14 +84,20 @@ $(document).ready(function () {
         });
     });
     // Sidenav close button position change on scroll for mobile devices
-    if (window.matchMedia('(max-width: 600px)').matches) {
-        $(window).scroll(function () {
+    $(window).scroll(function () {
+        if (window.matchMedia('(max-width: 600px)').matches) {
             if ($(document).scrollTop() >= 42.400001525878906) {
                 $('#sidenav-close').css('top', '-20px');
             } else {
                 $('#sidenav-close').css('top', '0');
             }
-        });
-    }
+        }
+    });
 });
 /* Script for animated scolling navbar end */
+
+/* Script for forcing page scroll position to top at page refresh begin*/
+$(document).ready(function () {
+    $(this).scrollTop(0);
+});
+/* Script for forcing page scroll position to top at page refresh begin*/

@@ -163,7 +163,7 @@ body {
     right: 0;
     font-size: 50px;
     margin-top: 4px;
-    padding-right: 14px;
+    padding-right: 16px;
 }
 
 #sidenav-items {
@@ -172,7 +172,7 @@ body {
 
 .sidenav li {
     border-bottom: 1px solid #575766;
-    padding: 20px;
+    padding: 10px;
 }
 
 .sidenav li a {
