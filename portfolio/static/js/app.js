@@ -101,3 +101,17 @@ $(document).ready(function () {
     $(this).scrollTop(0);
 });
 /* Script for forcing page scroll position to top at page refresh begin*/
+
+/* Script for animating social links begin */
+$(document).ready(function () {
+    $('#hero ul li a').click(function() {
+        $(this).css('transform', 'scale(1)');
+    });
+
+    $('#hero ul li a').hover(function() {
+        $(this).css('transform', 'scale(1.2)');
+    }, function() {
+        $(this).css('transform', 'scale(1)');
+    });
+});
+/* Script for animating social links end */

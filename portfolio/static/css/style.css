@@ -158,8 +158,8 @@ body {
 }
 
 #sidenav-close {
-    position: absolute; 
-    top: 0; 
+    position: absolute;
+    top: 0;
     right: 0;
     font-size: 50px;
     margin-top: 4px;
@@ -287,6 +287,8 @@ header {
 
 #hero ul>li>a {
     color: inherit;
+    display: block;
+    transition: transform 0.5s ease-in-out;
 }
 
 #scroll-btn {
