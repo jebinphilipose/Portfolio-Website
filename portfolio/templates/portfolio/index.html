@@ -65,13 +65,13 @@
                                     <a href="#about">About</a>
                                 </li>
                                 <li>
-                                    <a href="#">Projects</a>
+                                    <a href="#projects">Projects</a>
                                 </li>
                                 <li>
-                                    <a href="#">Contact</a>
+                                    <a href="#contact">Contact</a>
                                 </li>
                                 <li>
-                                    <a href="#" style="margin-right: 0px;">Blog</a>
+                                    <a href="#blog" style="margin-right: 0px;">Blog</a>
                                 </li>
                             </ul>
                         </div>
@@ -91,13 +91,13 @@
                         <a href="#about" class="center-align sidenav-close">About</a>
                     </li>
                     <li>
-                        <a href="#" class="center-align">Projects</a>
+                        <a href="#projects" class="center-align sidenav-close">Projects</a>
                     </li>
                     <li>
-                        <a href="#" class="center-align">Contact</a>
+                        <a href="#contact" class="center-align sidenav-close">Contact</a>
                     </li>
                     <li style="border-bottom: none;">
-                        <a href="#" class="center-align">Blog</a>
+                        <a href="#blog" class="center-align sidenav-close">Blog</a>
                     </li>
                 </div>
             </ul>
@@ -161,122 +161,125 @@
             </div>
             <!-- Hero Section end -->
         </header>
-        <section id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="col s12">
-                        <h1 class="center-align section-heading">About Me</h1>
-                    </div>
-                    <div class="col s12">
-                        <div class="row">
-                            <div class="col s12">
-                                <div class="card card-box">
-                                    <div class="card-content">
-                                        <img class="responsive-img" src="{% static 'images/jebin.jpg' %}" id="circle-img">
-                                        <h4 class="inner-section-heading">Hello, World!</h4>
-                                        <p class="inner-section-content">I'm Jebin Philipose. I'm an undergraduate student studying towards a Bachelor of
-                                            Engineering in Computer Science at Chitkara University, Punjab. Over the past
-                                            2 years, I have been developing my skills as a programmer. I believe in self-learning
-                                            when it comes to learning anything, be it a new programming language or a framework.
-                                            Therefore, I am comfortable in switching between multiple languages and learning
-                                            a new thing isn't a problem. My interest lies in problem solving skills and development.
-                                            I tried web development for a while and I really enjoy it. While making a website,
-                                            I am responsible for its front-end as well as back-end. The websites which I
-                                            make are responsive on all screen sizes. So basically, I am a self-made Full
-                                            Stack Web Developer. I have a diverse set of skills, from HTML + CSS + Javascript,
-                                            all the way to Python/Flask/Django and databases, to hosting the website on a
-                                            linux server instance like GCE or Digital Ocean. I even graduated from Udacity's
-                                            Full Stack Web Developer nanodegree. While I'm not programming, I enjoy spending
-                                            time listening to music, playing football, watching movies and gaining knowledge
-                                            about technical stuff.
-                                        </p>
+        <div id="page-sections">
+            <section id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <h1 class="center-align section-heading">About Me</h1>
+                        </div>
+                        <div class="col s12">
+                            <div class="row">
+                                <div class="col s12">
+                                    <div class="card card-box">
+                                        <div class="card-content">
+                                            <img class="responsive-img" src="{% static 'images/jebin.jpg' %}" id="circle-img">
+                                            <h4 class="inner-section-heading">Hello, World!</h4>
+                                            <p class="inner-section-content">I'm Jebin Philipose. I'm an undergraduate student studying towards a Bachelor
+                                                of Engineering in Computer Science at Chitkara University, Punjab. Over the
+                                                past 2 years, I have been developing my skills as a programmer. I believe
+                                                in self-learning when it comes to learning anything, be it a new programming
+                                                language or a framework. Therefore, I am comfortable in switching between
+                                                multiple languages and learning a new thing isn't a problem. My interest
+                                                lies in problem solving skills and development. I tried web development for
+                                                a while and I really enjoy it. While making a website, I am responsible for
+                                                its front-end as well as back-end. The websites which I make are responsive
+                                                on all screen sizes. So basically, I am a self-made Full Stack Web Developer.
+                                                I have a diverse set of skills, from HTML + CSS + Javascript, all the way
+                                                to Python/Flask/Django and databases, to hosting the website on a linux server
+                                                instance like GCE or Digital Ocean. I even graduated from Udacity's Full
+                                                Stack Web Developer nanodegree. While I'm not programming, I enjoy spending
+                                                time listening to music, playing football, watching movies and gaining knowledge
+                                                about technical stuff.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col s12">
-                        <div class="row">
-                            <div class="col s12 m6">
-                                <div class="card card-box">
-                                    <div class="card-content">
-                                        <h4 class="center-align inner-section-heading">Skills</h4>
-                                        <p class="inner-section-content">I primarily do Back-End Development because I feel a website without a back-end is
-                                            just a template. My primary tool for back-end is Python/Flask/Django and its
-                                            associated stack: PostgreSQL, Gunicorn, Nginx.</p>
-                                        <ul class="collection">
-                                            <li class="collection-item" style="background-color: #F3F3F3;">
-                                                <p class="inner-section-content-small">C / C++</p>
-                                                <div class="progress">
-                                                    <div class="determinate indigo" style="width: 90%;"></div>
-                                                </div>
-                                            </li>
-                                            <li class="collection-item" style="background-color: #F3F3F3;">
-                                                <p class="inner-section-content-small">Python</p>
-                                                <div class="progress">
-                                                    <div class="determinate indigo" style="width: 90%;"></div>
-                                                </div>
-                                            </li>
-                                            <li class="collection-item" style="background-color: #F3F3F3;">
-                                                <p class="inner-section-content-small">Front-End (HTML, CSS, JS, Materialize, Bootstrap, jQuery, AJAX)</p>
-                                                <div class="progress">
-                                                    <div class="determinate indigo" style="width: 80%;"></div>
-                                                </div>
-                                            </li>
-                                            <li class="collection-item" style="background-color: #F3F3F3;">
-                                                <p class="inner-section-content-small">Back-End (Python/Flask/Django, PostgreSQL, Gunicorn, Nginx)</p>
-                                                <div class="progress">
-                                                    <div class="determinate indigo" style="width: 90%;"></div>
-                                                </div>
-                                            </li>
-                                            <li class="collection-item" style="background-color: #F3F3F3;">
-                                                <p class="inner-section-content-small">LAMP (Linux, Apache, MySQL, Python) Stack</p>
-                                                <div class="progress">
-                                                    <div class="determinate indigo" style="width: 90%;"></div>
-                                                </div>
-                                            </li>
-                                            <li class="collection-item" style="background-color: #F3F3F3;">
-                                                <p class="inner-section-content-small">Version Control (Git)</p>
-                                                <div class="progress">
-                                                    <div class="determinate indigo" style="width: 90%;"></div>
-                                                </div>
-                                            </li>
-                                        </ul>
+                        <div class="col s12">
+                            <div class="row">
+                                <div class="col s12 m6">
+                                    <div class="card card-box">
+                                        <div class="card-content">
+                                            <h4 class="center-align inner-section-heading">Skills</h4>
+                                            <p class="inner-section-content">I primarily do Back-End Development because I feel a website without a back-end
+                                                is just a template. My primary tool for back-end is Python/Flask/Django and
+                                                its associated stack: PostgreSQL, Gunicorn, Nginx.</p>
+                                            <ul class="collection">
+                                                <li class="collection-item" style="background-color: #F3F3F3;">
+                                                    <p class="inner-section-content-small">C / C++</p>
+                                                    <div class="progress">
+                                                        <div class="determinate indigo" style="width: 90%;"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="collection-item" style="background-color: #F3F3F3;">
+                                                    <p class="inner-section-content-small">Python</p>
+                                                    <div class="progress">
+                                                        <div class="determinate indigo" style="width: 90%;"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="collection-item" style="background-color: #F3F3F3;">
+                                                    <p class="inner-section-content-small">Front-End (HTML, CSS, JS, Materialize, Bootstrap, jQuery, AJAX)</p>
+                                                    <div class="progress">
+                                                        <div class="determinate indigo" style="width: 80%;"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="collection-item" style="background-color: #F3F3F3;">
+                                                    <p class="inner-section-content-small">Back-End (Python/Flask/Django, PostgreSQL, Gunicorn, Nginx)</p>
+                                                    <div class="progress">
+                                                        <div class="determinate indigo" style="width: 90%;"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="collection-item" style="background-color: #F3F3F3;">
+                                                    <p class="inner-section-content-small">LAMP (Linux, Apache, MySQL, Python) Stack</p>
+                                                    <div class="progress">
+                                                        <div class="determinate indigo" style="width: 90%;"></div>
+                                                    </div>
+                                                </li>
+                                                <li class="collection-item" style="background-color: #F3F3F3;">
+                                                    <p class="inner-section-content-small">Version Control (Git)</p>
+                                                    <div class="progress">
+                                                        <div class="determinate indigo" style="width: 90%;"></div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col s12 m6">
-                                <div class="card card-box">
-                                    <div class="card-content">
-                                        <h4 class="center-align inner-section-heading">Education</h4>
-                                        <ul class="collection">
-                                            <li class="collection-item" style="background-color: #F3F3F3;">
-                                                <span class="inner-section-content-small" style="font-weight: bold;">
-                                                    <i class="fa fa-university"></i> Bachelor of Engineering (Computer Science)
-                                                </span>
-                                                <br>
-                                                <br>
-                                                <span class="inner-section-content-small" style="font-style: italic;">Chitkara University, Punjab
-                                                    <br>(2016-present)</span>
-                                            </li>
-                                            <li class="collection-item" style="background-color: #F3F3F3;">
-                                                <span class="inner-section-content-small" style="font-weight: bold;">
-                                                    <i class="fa fa-graduation-cap"></i> Full Stack Web Developer Nanodegree
-                                                </span>
-                                                <br>
-                                                <br>
-                                                <span class="inner-section-content-small" style="font-style: italic;">Udacity
-                                                    <br>(May 2018)</span>
-                                            </li>
-                                        </ul>
+                                <div class="col s12 m6">
+                                    <div class="card card-box">
+                                        <div class="card-content">
+                                            <h4 class="center-align inner-section-heading">Education</h4>
+                                            <ul class="collection">
+                                                <li class="collection-item" style="background-color: #F3F3F3;">
+                                                    <span class="inner-section-content-small" style="font-weight: bold;">
+                                                        <i class="fa fa-university"></i> Bachelor of Engineering (Computer Science)
+                                                    </span>
+                                                    <br>
+                                                    <br>
+                                                    <span class="inner-section-content-small" style="font-style: italic;">Chitkara University, Punjab
+                                                        <br>(2016-present)</span>
+                                                </li>
+                                                <li class="collection-item" style="background-color: #F3F3F3;">
+                                                    <span class="inner-section-content-small" style="font-weight: bold;">
+                                                        <i class="fa fa-graduation-cap"></i> Full Stack Web Developer Nanodegree
+                                                    </span>
+                                                    <br>
+                                                    <br>
+                                                    <span class="inner-section-content-small" style="font-style: italic;">Udacity
+                                                        <br>(May 2018)</span>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </div>
 
     <!-- jQuery CDN -->

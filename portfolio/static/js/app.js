@@ -47,7 +47,7 @@ $(document).ready(function () {
         event.preventDefault();
         var url = this.getAttribute('href');
         if (url !== '#') {
-            var offset = 64;
+            var offset = 62;
             if ($(url).length) {
                 $('html, body').stop().animate({
                     scrollTop: $(url).offset().top - offset
@@ -58,23 +58,15 @@ $(document).ready(function () {
 });
 /* Smooth scroll to a section end */
 
-/* Script for animated scolling navbar begin */
+/* Script for active link switching begin */
 $(document).ready(function () {
-    $(window).scroll(function () {
-        if ($(document).scrollTop() >= 42.400001525878906) {
-            $('nav').addClass('shrink');
-        } else {
-            $('nav').removeClass('shrink');
-        }
-    });
-
     $(window).scroll(function () {
         var currentLocation = window.pageYOffset;
         var navLinks = $("nav li a");
         var offset = 64;
         navLinks.each(function () {
-            var url = this.getAttribute('href');
-            if (url !== '#') {
+            var url = $(this.hash);
+            if ($(url).length) {
                 var sectionOffset = $(url).offset().top - offset;
                 if (sectionOffset <= currentLocation) {
                     $(this).addClass('active');
@@ -83,18 +75,28 @@ $(document).ready(function () {
             }
         });
     });
-    // Sidenav close button position change on scroll for mobile devices
+});
+/* Script for active link switching end */
+
+/* Script for animated scrolling navbar begin */
+$(document).ready(function () {
     $(window).scroll(function () {
-        if (window.matchMedia('(max-width: 600px)').matches) {
-            if ($(document).scrollTop() >= 42.400001525878906) {
+        if ($(document).scrollTop() >= $('#about').offset().top - 64) {
+            $('nav').addClass('shrink');
+            // Sidenav close button position change on scroll for mobile devices
+            if (window.matchMedia('(max-width: 600px)').matches) {
                 $('#sidenav-close').css('top', '-20px');
-            } else {
-                $('#sidenav-close').css('top', '0');
+            }
+        } else {
+            $('nav').removeClass('shrink');
+            // Sidenav close button position change on scroll for mobile devices
+            if (window.matchMedia('(max-width: 600px)').matches) {
+                $('#sidenav-close').css('top', '0px');
             }
         }
     });
 });
-/* Script for animated scolling navbar end */
+/* Script for animated scrolling navbar end */
 
 /* Script for forcing page scroll position to top at page refresh begin*/
 $(document).ready(function () {
@@ -104,13 +106,13 @@ $(document).ready(function () {
 
 /* Script for animating social links begin */
 $(document).ready(function () {
-    $('#hero ul li a').click(function() {
+    $('#hero ul li a').click(function () {
         $(this).css('transform', 'scale(1)');
     });
 
-    $('#hero ul li a').hover(function() {
+    $('#hero ul li a').hover(function () {
         $(this).css('transform', 'scale(1.2)');
-    }, function() {
+    }, function () {
         $(this).css('transform', 'scale(1)');
     });
 });

@@ -136,6 +136,10 @@ body {
     padding: 0px;
 }
 
+a {
+    outline: none;
+}
+
 #logo-image {
     height: 52px;
     width: 52px;
@@ -214,7 +218,7 @@ nav li>a:focus {
 }
 
 nav li>a:hover {
-    color: rgba(255, 255, 255, .5);
+    color: rgba(255, 255, 255, 0.75);
 }
 
 nav li>a.active {
@@ -231,23 +235,34 @@ nav li>a.active {
 }
 
 header {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/background.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center center;
-    height: 100vh;
+    position: fixed;
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    will-change: transform;
+    z-index: -1;
 }
 
 #hero {
     color: #fff;
-    height: calc(100vh - 183.15px);
+    height: calc(100vh - 84px);
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-#hero .container {
-    height: fit-content;
+    position: fixed;
 }
 
 #type {
@@ -274,7 +289,7 @@ header {
 }
 
 #hero ul {
-    width: fit-content;
+    text-align: center;
     margin: 0 auto;
     margin-top: 40px;
 }
@@ -288,7 +303,7 @@ header {
 #hero ul>li>a {
     color: inherit;
     display: block;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 #scroll-btn {
@@ -296,8 +311,19 @@ header {
     bottom: 0;
     left: 0;
     right: 0;
-    margin: 0px auto;
-    margin-bottom: 10px;
+}
+
+#page-sections {
+    background: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#page-sections section {
+    width: 100%;
 }
 
 #circle-img {
@@ -354,7 +380,7 @@ header {
         width: 44px;
     }
     #hero {
-        height: calc(100vh - 172.47px);
+        height: calc(100vh - 82px)
     }
     #hero h1 {
         font-size: 2.5rem;
