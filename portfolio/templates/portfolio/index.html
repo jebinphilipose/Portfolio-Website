@@ -167,13 +167,13 @@
                 <div class="container">
                     <div class="row">
                         <div class="col s12">
-                            <h1 class="center-align section-heading">About Me</h1>
+                            <h1 class="center-align section-heading" style="color: #252934;">About Me</h1>
                         </div>
                         <div class="col s12">
                             <div class="row">
                                 <div class="col s12">
                                     <div class="card card-box">
-                                        <div class="card-content">
+                                        <div class="card-content" style="background: aliceblue;">
                                             <img class="responsive-img" src="{% static 'images/jebin.jpg' %}" id="circle-img">
                                             <h4 class="inner-section-heading">Hello, World!</h4>
                                             <p class="inner-section-content">{{summary.summary}}</p>
@@ -186,11 +186,11 @@
                             <div class="row">
                                 <div class="col s12 m6">
                                     <div class="card card-box">
-                                        <div class="card-content">
-                                            <h4 class="center-align inner-section-heading">Skills</h4>
+                                        <div class="card-content" style="background: #252934;">
+                                            <h4 class="center-align inner-section-heading" style="color: #FFF;">Skills</h4>
                                             <ul class="collection">
                                                 {% for skill in skills %}
-                                                <li class="collection-item" style="background-color: #F3F3F3;">
+                                                <li class="collection-item">
                                                     <p class="inner-section-content-small">{{ skill.skill }}</p>
                                                     <div class="progress">
                                                         <div class="determinate indigo" style="width: {{skill.progress}};"></div>
@@ -203,11 +203,11 @@
                                 </div>
                                 <div class="col s12 m6">
                                     <div class="card card-box">
-                                        <div class="card-content">
-                                            <h4 class="center-align inner-section-heading">Education</h4>
+                                        <div class="card-content" style="background: #252934;">
+                                            <h4 class="center-align inner-section-heading" style="color: #FFF;">Education</h4>
                                             <ul class="collection">
                                                 {% for degree in degrees %}
-                                                <li class="collection-item" style="background-color: #F3F3F3;">
+                                                <li class="collection-item">
                                                     <span class="inner-section-content-small" style="font-weight: bold;">
                                                         <i class="{{degree.logo_class}}"></i> {{degree.degree}}
                                                     </span>
@@ -222,11 +222,11 @@
                                     <div class="row">
                                         <div class="col s12">
                                             <div class="card card-box" id="aboutLastBox">
-                                                <div class="card-content">
+                                                <div class="card-content" style="background: #252934; color: #FFF;">
                                                     <h4 class="center-align inner-section-heading">Download Resume</h4>
-                                                    <h5 class="center-align inner-section-heading">(Not up right now)</h5>
+                                                    <h6 class="center-align inner-section-heading">(Not up right now)</h6>
                                                     <br>
-                                                    <a href="#" id="resumeLink" class="zoomableLink" style="color: black; text-align: center;">
+                                                    <a href="#" id="resumeLink" class="zoomableLink" style="text-align: center;">
                                                         <i class="fas fa-download" style="font-size: 3rem;"></i>
                                                     </a>
                                                 </div>

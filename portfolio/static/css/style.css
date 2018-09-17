@@ -351,8 +351,20 @@ header::before {
 }
 
 .card-box {
-    border: 2px solid black;
     box-shadow: none;
+}
+
+.card-content {
+    border-radius: 20px !important;
+    border: 1px solid #252934 !important;
+}
+
+.collection {
+    border: none;
+}
+
+.collection-item {
+    background: aliceblue !important;
 }
 
 .inner-section-heading {
