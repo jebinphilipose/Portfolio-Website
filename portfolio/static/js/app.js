@@ -123,20 +123,28 @@ $(document).ready(function () {
 /* Script for animating social links end */
 
 /* Script for carousel begin */
-$('.carousel.carousel-slider').carousel({
-    fullWidth: true,
-    indicators: false,
- });
+$(document).ready(function () {
+    $('.carousel.carousel-slider').carousel({
+        fullWidth: true,
+        indicators: false,
+    });
 
- $('.moveNextCarousel').click(function(e){
-    e.preventDefault();
-    e.stopPropagation();
-    $('.carousel').carousel('next');
- });
+    $('.moveNextCarousel').click(function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $('.carousel').carousel('next');
+    });
 
- $('.movePrevCarousel').click(function(e){
-    e.preventDefault();
-    e.stopPropagation();
-    $('.carousel').carousel('prev');
- });
- /* Script for carousel end */
+    $('.movePrevCarousel').click(function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $('.carousel').carousel('prev');
+    });
+});
+/* Script for carousel end */
+
+/* Script for modal end */
+$(document).ready(function () {
+    $('.modal').modal();
+});
+/* Script for modal end */

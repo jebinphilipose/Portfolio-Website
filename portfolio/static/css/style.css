@@ -418,24 +418,24 @@ header::before {
     transition: .5s ease-in-out;
 }
 
-.imageHoverShow:hover img{
+.imageHoverShow:hover img {
     filter: blur(2px) brightness(60%);
 }
 
 .content {
-    position:absolute;
-    z-index:1;
-    top:50%;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
     transform: translateY(-50%);
     padding: 0 20px;
-    text-align:center;
-    color:#fff;
-    opacity:0;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
     width: 100%;
     transition: .5s ease-in-out;
 }
 
-.imageHoverShow:hover .content{
+.imageHoverShow:hover .content {
     opacity: 1;
 }
 
@@ -454,16 +454,18 @@ header::before {
     color: red;
 }
 
-.circleIconLink {
-    font-size: 29px;
-    border: 1px solid #FFF;
-    color: #FFF;
+.circleIcon {
+    display: inline-block;
     border-radius: 50%;
-    padding: 4.5px 10px;
+    padding: 0.3em 0.35em;
+    color: #FFF;
+    border: 1px solid #FFF;
+    font-size: 24px;
+    background: #757575;
 }
 
-.circleIconLink:hover {
-    background: #757575;
+.modal-overlay {
+    background: transparent !important;
 }
 
 @media screen and (min-width: 601px) {

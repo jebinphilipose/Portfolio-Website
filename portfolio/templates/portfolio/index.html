@@ -262,7 +262,7 @@
                                     </a>
                                 </div>
                                 {% for project in projects %}
-                                <div class="carousel-item white-text" style="background: #222;">
+                                <div class="carousel-item white-text">
                                     <div class="carouselBox">
                                         <div class="imageHoverShow">
                                             <img src="{{project.image.url}}" alt="image" style="width: 100%;">
@@ -271,15 +271,27 @@
                                                 <button style="font-family: 'Lato', sans-serif;" class="ovalButton hide-on-small-only"
                                                     onclick="window.open('{{project.github_link}}')">
                                                     SEE PROJECT</button>
-                                                <a class="circleIconLink hide-on-med-and-up" href="{{project.github_link}}"
-                                                    target="_blank">
-                                                    <i class="fab fa-github"></i>
+                                                <a href="{{project.github_link}}" target="_blank" class="hide-on-med-and-up"
+                                                    style="margin: 0 5px;">
+                                                    <i class="fab fa-github circleIcon"></i>
                                                 </a>
-                                                <p style="font-family: 'Lato', sans-serif; margin-top: 5px;" class="hide-on-med-and-up">SEE
-                                                    PROJECT</p>
+                                                <a href="#modal{{project.pk}}" class="hide-on-med-and-up modal-trigger" style="margin: 0 5px;">
+                                                    <i class="fas fa-info-circle circleIcon"></i>
+                                                </a>
                                             </div>
                                         </div>
                                         <p style="font-family: 'Lato', sans-serif; font-size: 2rem; font-weight: 300;">{{project.title}}</p>
+                                    </div>
+                                </div>
+                                <!-- Modal Structure -->
+                                <div id="modal{{project.pk}}" class="modal">
+                                    <div class="modal-content">
+                                        <h5>Description</h5>
+                                        <br>
+                                        <p>{{project.description}}</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
                                     </div>
                                 </div>
                                 {% endfor %}
