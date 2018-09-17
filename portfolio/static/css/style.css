@@ -105,10 +105,12 @@
 }
 
 @keyframes spin {
+
     0%,
     15% {
         transform: rotate(0);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -265,6 +267,10 @@ header::before {
     position: fixed;
 }
 
+#hero h1 {
+    margin: 3rem 0 3rem 0 !important;
+}
+
 #type {
     font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
@@ -280,9 +286,11 @@ header::before {
     0% {
         opacity: 1;
     }
+
     50% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -300,8 +308,8 @@ header::before {
     font-size: 4rem;
 }
 
-#hero ul>li>a {
-    color: inherit;
+.zoomableLink {
+    color: #FFF;
     display: block;
     transition: transform 0.3s ease-in-out;
 }
@@ -340,7 +348,6 @@ header::before {
     font-weight: 700;
     font-size: 80px;
     text-transform: uppercase;
-    margin-bottom: 60px;
 }
 
 .card-box {
@@ -367,6 +374,86 @@ header::before {
     background-color: #000 !important;
 }
 
+.carousel-fixed-item {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4rem;
+    display: table;
+}
+
+#carouselRightButton {
+    left: unset !important;
+}
+
+.carouselBox {
+    width: 80%;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+.carousel-item {
+    height: 100% !important;
+}
+
+.imageHoverShow {
+    position: relative;
+}
+
+.imageHoverShow img {
+    transition: .5s ease-in-out;
+}
+
+.imageHoverShow:hover img{
+    filter: blur(2px) brightness(60%);
+}
+
+.content {
+    position:absolute;
+    z-index:1;
+    top:50%;
+    transform: translateY(-50%);
+    padding: 0 20px;
+    text-align:center;
+    color:#fff;
+    opacity:0;
+    width: 100%;
+    transition: .5s ease-in-out;
+}
+
+.imageHoverShow:hover .content{
+    opacity: 1;
+}
+
+.ovalButton {
+    width: 150px;
+    height: 50px;
+    letter-spacing: 1px;
+    border-radius: 25px;
+    border: 1px solid #FFF;
+    background: transparent !important;
+    color: #FFF;
+}
+
+.ovalButton:hover {
+    background: #FFF !important;
+    color: red;
+}
+
+.circleIconLink {
+    font-size: 29px;
+    border: 1px solid #FFF;
+    color: #FFF;
+    border-radius: 50%;
+    padding: 4.5px 10px;
+}
+
+.circleIconLink:hover {
+    background: #757575;
+}
+
 @media screen and (min-width: 601px) {
     #hero h1 {
         font-size: 5rem;
@@ -379,27 +466,56 @@ header::before {
         height: 44px;
         width: 44px;
     }
+
     #hero {
         height: calc(100vh - 82px)
     }
+
     #hero h1 {
         font-size: 2.5rem;
         font-weight: 900;
     }
+
     #hero ul>li {
         margin: 0 7.5px;
         font-size: 1.8rem;
     }
+
     #type {
         font-size: 1.1rem;
     }
+
     #scroll-btn h5 {
         font-size: 1.3rem;
     }
+
     #scroll-btn ul li a {
         font-size: 1.3rem;
     }
+
     .section-heading {
         font-size: 4.2rem;
+    }
+
+    #circle-img {
+        display: block;
+        margin: 0 auto;
+        float: none;
+    }
+
+    #about .row {
+        margin-bottom: 0px;
+    }
+
+    #about .card-box {
+        margin-bottom: 20px;
+    }
+
+    #aboutLastBox {
+        margin-bottom: 27px !important;
+    }
+
+    .carouselBox>p {
+        font-size: 1.6rem !important;
     }
 }

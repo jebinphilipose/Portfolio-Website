@@ -10,7 +10,7 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lora|Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Oswald|Lato=regular, light" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
@@ -116,27 +116,27 @@
                         <div class="col s12">
                             <ul>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" class="zoomableLink">
                                         <i class="fab fa-github"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" class="zoomableLink">
                                         <i class="fab fa-linkedin-in"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" class="zoomableLink">
                                         <i class="fab fa-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" class="zoomableLink">
                                         <i class="fab fa-quora"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" class="zoomableLink">
                                         <i class="fas fa-at"></i>
                                     </a>
                                 </li>
@@ -149,7 +149,7 @@
                             <div class="col s12">
                                 <ul style="margin-top: -5px;">
                                     <li style="font-size: 2rem;">
-                                        <a href="#about" class="center-align">
+                                        <a href="#about" class="center-align zoomableLink">
                                             <i class="fas fa-chevron-circle-down"></i>
                                         </a>
                                     </li>
@@ -162,6 +162,7 @@
             <!-- Hero Section end -->
         </header>
         <div id="page-sections">
+            <!-- About section begin -->
             <section id="about">
                 <div class="container">
                     <div class="row">
@@ -175,23 +176,7 @@
                                         <div class="card-content">
                                             <img class="responsive-img" src="{% static 'images/jebin.jpg' %}" id="circle-img">
                                             <h4 class="inner-section-heading">Hello, World!</h4>
-                                            <p class="inner-section-content">I'm Jebin Philipose. I'm an undergraduate student studying towards a Bachelor
-                                                of Engineering in Computer Science at Chitkara University, Punjab. Over the
-                                                past 2 years, I have been developing my skills as a programmer. I believe
-                                                in self-learning when it comes to learning anything, be it a new programming
-                                                language or a framework. Therefore, I am comfortable in switching between
-                                                multiple languages and learning a new thing isn't a problem. My interest
-                                                lies in problem solving skills and development. I tried web development for
-                                                a while and I really enjoy it. While making a website, I am responsible for
-                                                its front-end as well as back-end. The websites which I make are responsive
-                                                on all screen sizes. So basically, I am a self-made Full Stack Web Developer.
-                                                I have a diverse set of skills, from HTML + CSS + Javascript, all the way
-                                                to Python/Flask/Django and databases, to hosting the website on a linux server
-                                                instance like GCE or Digital Ocean. I even graduated from Udacity's Full
-                                                Stack Web Developer nanodegree. While I'm not programming, I enjoy spending
-                                                time listening to music, playing football, watching movies and gaining knowledge
-                                                about technical stuff.
-                                            </p>
+                                            <p class="inner-section-content">{{summary.summary}}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -203,46 +188,15 @@
                                     <div class="card card-box">
                                         <div class="card-content">
                                             <h4 class="center-align inner-section-heading">Skills</h4>
-                                            <p class="inner-section-content">I primarily do Back-End Development because I feel a website without a back-end
-                                                is just a template. My primary tool for back-end is Python/Flask/Django and
-                                                its associated stack: PostgreSQL, Gunicorn, Nginx.</p>
                                             <ul class="collection">
+                                                {% for skill in skills %}
                                                 <li class="collection-item" style="background-color: #F3F3F3;">
-                                                    <p class="inner-section-content-small">C / C++</p>
+                                                    <p class="inner-section-content-small">{{ skill.skill }}</p>
                                                     <div class="progress">
-                                                        <div class="determinate indigo" style="width: 90%;"></div>
+                                                        <div class="determinate indigo" style="width: {{skill.progress}};"></div>
                                                     </div>
                                                 </li>
-                                                <li class="collection-item" style="background-color: #F3F3F3;">
-                                                    <p class="inner-section-content-small">Python</p>
-                                                    <div class="progress">
-                                                        <div class="determinate indigo" style="width: 90%;"></div>
-                                                    </div>
-                                                </li>
-                                                <li class="collection-item" style="background-color: #F3F3F3;">
-                                                    <p class="inner-section-content-small">Front-End (HTML, CSS, JS, Materialize, Bootstrap, jQuery, AJAX)</p>
-                                                    <div class="progress">
-                                                        <div class="determinate indigo" style="width: 80%;"></div>
-                                                    </div>
-                                                </li>
-                                                <li class="collection-item" style="background-color: #F3F3F3;">
-                                                    <p class="inner-section-content-small">Back-End (Python/Flask/Django, PostgreSQL, Gunicorn, Nginx)</p>
-                                                    <div class="progress">
-                                                        <div class="determinate indigo" style="width: 90%;"></div>
-                                                    </div>
-                                                </li>
-                                                <li class="collection-item" style="background-color: #F3F3F3;">
-                                                    <p class="inner-section-content-small">LAMP (Linux, Apache, MySQL, Python) Stack</p>
-                                                    <div class="progress">
-                                                        <div class="determinate indigo" style="width: 90%;"></div>
-                                                    </div>
-                                                </li>
-                                                <li class="collection-item" style="background-color: #F3F3F3;">
-                                                    <p class="inner-section-content-small">Version Control (Git)</p>
-                                                    <div class="progress">
-                                                        <div class="determinate indigo" style="width: 90%;"></div>
-                                                    </div>
-                                                </li>
+                                                {% endfor %}
                                             </ul>
                                         </div>
                                     </div>
@@ -252,25 +206,31 @@
                                         <div class="card-content">
                                             <h4 class="center-align inner-section-heading">Education</h4>
                                             <ul class="collection">
+                                                {% for degree in degrees %}
                                                 <li class="collection-item" style="background-color: #F3F3F3;">
                                                     <span class="inner-section-content-small" style="font-weight: bold;">
-                                                        <i class="fa fa-university"></i> Bachelor of Engineering (Computer Science)
+                                                        <i class="{{degree.logo_class}}"></i> {{degree.degree}}
                                                     </span>
                                                     <br>
                                                     <br>
-                                                    <span class="inner-section-content-small" style="font-style: italic;">Chitkara University, Punjab
-                                                        <br>(2016-present)</span>
+                                                    <span class="inner-section-content-small" style="font-style: italic;">{{degree.school}}<br>{{degree.year}}</span>
                                                 </li>
-                                                <li class="collection-item" style="background-color: #F3F3F3;">
-                                                    <span class="inner-section-content-small" style="font-weight: bold;">
-                                                        <i class="fa fa-graduation-cap"></i> Full Stack Web Developer Nanodegree
-                                                    </span>
-                                                    <br>
-                                                    <br>
-                                                    <span class="inner-section-content-small" style="font-style: italic;">Udacity
-                                                        <br>(May 2018)</span>
-                                                </li>
+                                                {% endfor %}
                                             </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <div class="card card-box" id="aboutLastBox">
+                                                <div class="card-content">
+                                                    <h4 class="center-align inner-section-heading">Download Resume</h4>
+                                                    <h5 class="center-align inner-section-heading">(Not up right now)</h5>
+                                                    <br>
+                                                    <a href="#" id="resumeLink" class="zoomableLink" style="color: black; text-align: center;">
+                                                        <i class="fas fa-download" style="font-size: 3rem;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -279,6 +239,56 @@
                     </div>
                 </div>
             </section>
+            <!-- About section end -->
+
+            <!-- Projects section begin -->
+            <section id="projects" style="height: calc(100vh - 62px); background: #222;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <h1 class="center-align section-heading" style="color: white;">Projects</h1>
+                        </div>
+
+                        <div class="col s12" style="height: calc(100vh - 240px) !important;">
+                            <div class="carousel carousel-slider center " style="position: relative; min-height: 100% !important;">
+                                <div class="carousel-fixed-item" id="carouselLeftButton">
+                                    <a href="#" class="movePrevCarousel" style="font-size:2.5rem; color: white;">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </a>
+                                </div>
+                                <div class="carousel-fixed-item" id="carouselRightButton">
+                                    <a href="#" class="moveNextCarousel" style="font-size:2.5rem; color: white;">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                </div>
+                                {% for project in projects %}
+                                <div class="carousel-item white-text" style="background: #222;">
+                                    <div class="carouselBox">
+                                        <div class="imageHoverShow">
+                                            <img src="{{project.image.url}}" alt="image" style="width: 100%;">
+                                            <div class="content">
+                                                <p class="hide-on-small-only">{{project.description}}</p>
+                                                <button style="font-family: 'Lato', sans-serif;" class="ovalButton hide-on-small-only"
+                                                    onclick="window.open('{{project.github_link}}')">
+                                                    SEE PROJECT</button>
+                                                <a class="circleIconLink hide-on-med-and-up" href="{{project.github_link}}"
+                                                    target="_blank">
+                                                    <i class="fab fa-github"></i>
+                                                </a>
+                                                <p style="font-family: 'Lato', sans-serif; margin-top: 5px;" class="hide-on-med-and-up">SEE
+                                                    PROJECT</p>
+                                            </div>
+                                        </div>
+                                        <p style="font-family: 'Lato', sans-serif; font-size: 2rem; font-weight: 300;">{{project.title}}</p>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Projects section end -->
         </div>
     </div>
 

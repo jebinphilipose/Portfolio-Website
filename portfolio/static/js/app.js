@@ -47,7 +47,7 @@ $(document).ready(function () {
         event.preventDefault();
         var url = this.getAttribute('href');
         if (url !== '#') {
-            var offset = 62;
+            var offset = 60;
             if ($(url).length) {
                 $('html, body').stop().animate({
                     scrollTop: $(url).offset().top - offset
@@ -106,14 +106,37 @@ $(document).ready(function () {
 
 /* Script for animating social links begin */
 $(document).ready(function () {
-    $('#hero ul li a').click(function () {
+    $('.zoomableLink').click(function () {
         $(this).css('transform', 'scale(1)');
     });
 
-    $('#hero ul li a').hover(function () {
+    $('.zoomableLink').hover(function () {
         $(this).css('transform', 'scale(1.2)');
     }, function () {
         $(this).css('transform', 'scale(1)');
     });
+    // Stop resume link from doing anything
+    $('#resumeLink').click(function (e) {
+        e.preventDefault();
+    });
 });
 /* Script for animating social links end */
+
+/* Script for carousel begin */
+$('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: false,
+ });
+
+ $('.moveNextCarousel').click(function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    $('.carousel').carousel('next');
+ });
+
+ $('.movePrevCarousel').click(function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    $('.carousel').carousel('prev');
+ });
+ /* Script for carousel end */
