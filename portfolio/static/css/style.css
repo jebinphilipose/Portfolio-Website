@@ -357,6 +357,7 @@ header::before {
 .card-content {
     border-radius: 20px !important;
     border: 1px solid #252934 !important;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22) !important;
 }
 
 .collection {
