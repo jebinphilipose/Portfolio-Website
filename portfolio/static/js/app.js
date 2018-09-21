@@ -143,8 +143,43 @@ $(document).ready(function () {
 });
 /* Script for carousel end */
 
-/* Script for modal end */
+/* Script for modal begin */
 $(document).ready(function () {
     $('.modal').modal();
 });
 /* Script for modal end */
+
+/* Script for removing helper text of contact form begin */
+$(document).ready(function () {
+    $('.input-field input, .input-field textarea').focus(function () {
+        $(this).siblings('.helper-text').text('');
+    });
+});
+/* Script for removing helper text of contact form end */
+
+/* Script for form submission using ajax begin */
+$(document).ready(function () {
+    var $myForm = $('#contactForm');
+    $myForm.submit(function (e) {
+        e.preventDefault()
+        var $formData = $(this).serialize()
+        var $thisURL = window.location.href
+        $.ajax({
+            method: "POST",
+            url: $thisURL,
+            data: $formData,
+            success: function (data) {
+                if (data.success) {
+                    $('#contactForm')[0].reset();
+                } else {
+                    var errors = data.errors;
+                    $('.input-field input, .input-field textarea').removeClass("valid invalid");
+                    for (var field in errors) {
+                        $(`.input-field input[name=${field}], .input-field textarea[name=${field}]`).siblings('.helper-text').text(errors[field][0]);
+                    }
+                }
+            },
+        });
+    });
+});
+/* Script for form submission using ajax end */

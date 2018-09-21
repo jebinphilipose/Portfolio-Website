@@ -10,7 +10,7 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lora|Oswald|Lato=regular, light" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Oswald|Lato:400,300|Montserrat:700,400" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
@@ -68,11 +68,13 @@
                                     <a href="#projects">Projects</a>
                                 </li>
                                 <li>
-                                    <a href="#contact">Contact</a>
+                                    <a href="#contact" style="margin-right: 0px;">Contact</a>
                                 </li>
+                                <!-- Hide Blog Link for a while
                                 <li>
-                                    <a href="#blog" style="margin-right: 0px;">Blog</a>
+                                    <a href="#blog" style="margin-right: 0px; color: aqua;">Blog</a>
                                 </li>
+                                -->
                             </ul>
                         </div>
                     </div>
@@ -96,15 +98,17 @@
                     <li>
                         <a href="#contact" class="center-align sidenav-close">Contact</a>
                     </li>
+                    <!-- Hide Blog Link for a while
                     <li style="border-bottom: none;">
-                        <a href="#blog" class="center-align sidenav-close">Blog</a>
+                        <a href="#blog" class="center-align sidenav-close" style="color: aqua;">Blog</a>
                     </li>
+                    -->
                 </div>
             </ul>
             <!-- Sidenav end -->
 
             <!-- Hero Section begin -->
-            <div id="hero">
+            <div id="hero" class="centerDiv">
                 <div class="container">
                     <div class="row">
                         <div class="col s12">
@@ -116,28 +120,28 @@
                         <div class="col s12">
                             <ul>
                                 <li>
-                                    <a href="#" class="zoomableLink">
+                                    <a href="https://github.com/jebinphilipose" target="_blank" class="zoomableLink">
                                         <i class="fab fa-github"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="zoomableLink">
+                                    <a href="https://in.linkedin.com/in/jebin-philipose" target="_blank" class="zoomableLink">
                                         <i class="fab fa-linkedin-in"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="zoomableLink">
+                                    <a href="https://www.facebook.com/philipose.jebin" target="_blank" class="zoomableLink">
                                         <i class="fab fa-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="zoomableLink">
+                                    <a href="https://www.quora.com/profile/Jebin-Philipose" target="_blank" class="zoomableLink">
                                         <i class="fab fa-quora"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="zoomableLink">
-                                        <i class="fas fa-at"></i>
+                                    <a href="mailto:jebinphilip24@gmail.com" target="_blank" class="zoomableLink">
+                                        <i class="fas fa-envelope"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -275,7 +279,8 @@
                                                     style="margin: 0 5px;">
                                                     <i class="fab fa-github circleIcon"></i>
                                                 </a>
-                                                <a href="#modal{{project.pk}}" class="hide-on-med-and-up modal-trigger" style="margin: 0 5px;">
+                                                <a href="#modal{{project.pk}}" class="hide-on-med-and-up modal-trigger"
+                                                    style="margin: 0 5px;">
                                                     <i class="fas fa-info-circle circleIcon"></i>
                                                 </a>
                                             </div>
@@ -301,6 +306,44 @@
                 </div>
             </section>
             <!-- Projects section end -->
+
+            <!-- Contact section begin -->
+            <section id="contact" class="centerDiv" style="min-height: calc(100vh - 62px); background: #252934;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            <h1 id="contactHeading">Get in touch</h1>
+                            <p style="font-family: 'Montserrat', sans-serif; color: aqua; margin-bottom: 3em; letter-spacing: 1px;">
+                                Have an idea or want to collaborate on an open source project?
+                                <br>
+                                I would <span style="font-size: 1.5rem; color: red;">&hearts;</span> to help!
+                                <br>
+                                Fill up this form or find me through one of my social links and
+                                <br>
+                                ~ let's talk.
+                            </p>
+                            <div class="row">
+                                <form id="contactForm" class="col s12" method="POST" action="">
+                                    {% csrf_token %}
+                                    <div class="row" `>
+                                        {% for field in form %}
+                                        <div class="input-field col s12">
+                                            {{ field }}
+                                            <label for="{{ field.id_for_label }}">{{ field.html_name|title }}</label>
+                                            <span class="helper-text" data-error="Invalid!" data-success="&#x2713;"></span>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="row" style="text-align: right;">
+                                        <button type="submit" style="font-family: 'Lato', sans-serif;" class="ovalButton">SUBMIT</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Contact section end -->
         </div>
     </div>
 

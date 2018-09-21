@@ -257,13 +257,16 @@ header::before {
     z-index: -1;
 }
 
+.centerDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #hero {
     color: #fff;
     height: calc(100vh - 84px);
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: fixed;
 }
 
@@ -357,7 +360,7 @@ header::before {
 .card-content {
     border-radius: 20px !important;
     border: 1px solid #252934 !important;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22) !important;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22) !important;
 }
 
 .collection {
@@ -453,6 +456,7 @@ header::before {
 .ovalButton:hover {
     background: #FFF !important;
     color: red;
+    cursor: pointer;
 }
 
 .circleIcon {
@@ -468,6 +472,76 @@ header::before {
 .modal-overlay {
     background: transparent !important;
 }
+
+#contactHeading {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: -2px;
+    font-size: 3.5rem;
+    line-height: 1.45em;
+    margin-bottom: 0.1em;
+}
+
+.input-field input,
+.input-field textarea {
+    color: #FFF;
+}
+
+.input-field label {
+    font-size: 1.2rem;
+}
+
+.input-field input:focus+label,
+.input-field textarea:focus+label {
+    color: aqua !important;
+}
+
+.input-field input:focus,
+.input-field textarea:focus {
+    border-bottom: 1px solid aqua !important;
+    box-shadow: 0 1px 0 0 aqua !important;
+}
+
+.input-field input~span,
+.input-field textarea~span {
+    font-size: 1.0rem !important;
+    color: red !important;
+}
+
+.input-field input.valid~span,
+.input-field textarea.valid~span {
+    font-size: 1.5rem !important;
+}
+
+.input-field input.invalid~span,
+.input-field textarea.invalid~span {
+    font-size: 1.0rem !important;
+}
+
+/* For removing input background colour for autocomplete */
+@keyframes autofill {
+    to {
+        color: #FFF;
+        background: transparent;
+    }
+}
+
+@-webkit-keyframes autofill {
+    to {
+        color: #FFF;
+        background: transparent;
+    }
+}
+
+input:-webkit-autofill {
+    -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+    animation-name: autofill;
+    animation-fill-mode: both;
+}
+
+/* For removing input background colour for autocomplete */
 
 @media screen and (min-width: 601px) {
     #hero h1 {
@@ -532,5 +606,9 @@ header::before {
 
     .carouselBox>p {
         font-size: 1.6rem !important;
+    }
+
+    #contactHeading {
+        font-size: 3rem;
     }
 }
