@@ -325,7 +325,7 @@
                             <div class="row">
                                 <form id="contactForm" class="col s12" method="POST" action="">
                                     {% csrf_token %}
-                                    <div class="row" `>
+                                    <div class="row" id="inputDiv">
                                         {% for field in form %}
                                         <div class="input-field col s12">
                                             {{ field }}
@@ -334,8 +334,16 @@
                                         </div>
                                         {% endfor %}
                                     </div>
-                                    <div class="row" style="text-align: right;">
-                                        <button type="submit" style="font-family: 'Lato', sans-serif;" class="ovalButton">SUBMIT</button>
+                                    <div class="row">
+                                        <div class="col m6 s12" id="flashDiv">
+                                            <div id="flashMessage" class="card-panel teal" style="padding: 10px; opacity: 0;">
+                                                <span class="white-text">Message sent successfully</span>
+                                                <span id="flashClose" style="float: right;">&#10006;</span>
+                                            </div>
+                                        </div>
+                                        <div class="col m6 s12">
+                                            <button type="submit" style="font-family: 'Lato', sans-serif; float: right;" class="ovalButton zoomableLink">SUBMIT</button>
+                                        </div>
                                     </div>
                                 </form>
                             </div>

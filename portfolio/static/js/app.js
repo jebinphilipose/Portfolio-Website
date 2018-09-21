@@ -170,6 +170,7 @@ $(document).ready(function () {
             data: $formData,
             success: function (data) {
                 if (data.success) {
+                    $('#flashMessage').animate({opacity: 1}, 1000);
                     $('#contactForm')[0].reset();
                 } else {
                     var errors = data.errors;
@@ -183,3 +184,11 @@ $(document).ready(function () {
     });
 });
 /* Script for form submission using ajax end */
+
+/* Script for closing flash message begin */
+$(document).ready(function () {
+    $('#flashClose').click(function () {
+        $('#flashMessage').animate({opacity: 0}, 0);
+    });
+});
+/* Script for closing flash message end */

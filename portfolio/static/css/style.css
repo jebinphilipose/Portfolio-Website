@@ -540,8 +540,11 @@ input:-webkit-autofill {
     animation-name: autofill;
     animation-fill-mode: both;
 }
-
 /* For removing input background colour for autocomplete */
+
+#flashClose:hover {
+    cursor: pointer;
+}
 
 @media screen and (min-width: 601px) {
     #hero h1 {
@@ -610,5 +613,11 @@ input:-webkit-autofill {
 
     #contactHeading {
         font-size: 3rem;
+    }
+    #inputDiv {
+        margin-bottom: 0px;
+    }
+    #flashDiv {
+        margin-bottom: 15px;
     }
 }
