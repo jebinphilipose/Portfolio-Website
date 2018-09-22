@@ -196,3 +196,13 @@ $(document).ready(function () {
     });
 });
 /* Script for closing flash message end */
+
+/* Script for text blinking begin */
+$(document).ready(function () {
+    function blink_text() {
+        $('.blink').fadeOut(1000);
+        $('.blink').fadeIn(1000);
+    }
+    setInterval(blink_text, 1000);
+});
+/* Script for text blinking end */
