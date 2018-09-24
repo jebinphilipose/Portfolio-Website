@@ -21,21 +21,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /* Script for typing effect begin */
 $(window).on('load', function () {
-    setTimeout(function () {
-        var typed = new Typed('#type', {
-            strings: [
-                "Hi, I'm Jebin Philipose <span>&semi;)</span>",
-                "I am a computer science engineering student",
-                "I am a self-made Full Stack Web Developer",
-                "I love <i class='fas fa-code'></i>",
-                "Start scrolling to learn more about me",
-            ],
-            typeSpeed: 50,
-            backSpeed: 30,
-            loop: true,
-            loopCount: Infinity
-        });
-    }, 2000);
+    var typed = new Typed('#type', {
+        strings: [
+            "Hi, I'm Jebin Philipose <span>&semi;)</span>",
+            "I am a computer science engineering student",
+            "I am a self-made Full Stack Web Developer",
+            "I love <i class='fas fa-code'></i>",
+            "Start scrolling to learn more about me",
+        ],
+        typeSpeed: 50,
+        backSpeed: 30,
+        loop: true,
+        loopCount: Infinity
+    });
 });
 /* Script for typing effect begin */
 
