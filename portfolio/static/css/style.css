@@ -274,8 +274,8 @@ header::before {
 }
 
 #type {
-    font-size: 1.5rem;
-    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-family: monospace;
 }
 
 .typed-cursor {
@@ -590,11 +590,11 @@ footer {
     }
 
     #type {
-        font-size: 1.1rem;
+        font-size: 0.9rem;
     }
 
     #scroll-btn h5 {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
     #scroll-btn ul li a {
