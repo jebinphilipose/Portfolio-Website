@@ -16,7 +16,10 @@ from .local_settings import (SECRET_KEY,
                              EMAIL_HOST,
                              EMAIL_HOST_USER,
                              EMAIL_HOST_PASSWORD,
-                             EMAIL_PORT)
+                             EMAIL_PORT,
+                             DEBUG,
+                             ALLOWED_HOSTS,
+                             DATABASES)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -29,9 +32,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = DEBUG
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ALLOWED_HOSTS
 
 
 # Application definition
@@ -80,16 +83,7 @@ WSGI_APPLICATION = 'mywebsite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'portfoliodb',
-        'USER': 'postgres',
-        'PASSWORD': 'postgrespassword',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
+DATABASES = DATABASES
 
 
 # Password validation
@@ -129,7 +123,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "site-static"),
 ]
