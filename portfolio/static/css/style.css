@@ -312,7 +312,7 @@ header::before {
 
 .zoomableLink {
     color: #FFF;
-    display: block;
+    display: inline-block;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -579,36 +579,8 @@ footer {
         height: calc(100vh - 82px)
     }
 
-    #hero h1 {
-        font-size: 2.5rem;
-        font-weight: 900;
-    }
-
-    #hero ul>li {
-        margin: 0 7.5px;
-        font-size: 1.8rem;
-    }
-
-    #type {
-        font-size: 0.9rem;
-    }
-
-    #scroll-btn h5 {
-        font-size: 1.1rem;
-    }
-
-    #scroll-btn ul li a {
-        font-size: 1.3rem;
-    }
-
     .section-heading {
         font-size: 4.2rem;
-    }
-
-    #circle-img {
-        display: block;
-        margin: 0 auto;
-        float: none;
     }
 
     #about .row {
@@ -637,5 +609,48 @@ footer {
 
     #flashDiv {
         margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 699px),
+screen and (max-height: 649px) {
+    #hero h1 {
+        font-size: 2.5rem;
+        font-weight: 900;
+    }
+
+    #hero ul>li {
+        margin: 0 7.5px;
+        font-size: 1.8rem;
+    }
+
+    #type {
+        font-size: 0.9rem;
+    }
+
+    #scroll-btn h5 {
+        font-size: 1.1rem;
+    }
+
+    #scroll-btn ul li a {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 609px) {
+    #circle-img {
+        display: block;
+        margin: 0 auto;
+        float: none;
+    }
+}
+
+@media screen and (max-height: 499px) {
+    #hero h1 {
+        margin-bottom: 20px !important;
+    }
+
+    #hero ul {
+        margin-top: 20px;
     }
 }
