@@ -4,6 +4,7 @@ var preloader = document.getElementById('preloader');
 window.addEventListener('load', function () {
     document.getElementById("preloader").style.opacity = 0;
     document.getElementById("wrapper").style.opacity = 1;
+    document.getElementsByTagName('html')[0].style.overflow = "auto";
     setTimeout(function () {
         document.getElementById("preloader").remove();
     }, 1000);

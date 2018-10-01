@@ -9,15 +9,236 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Favicon -->
     <link rel="shortcut icon" href="/static/images/favicon.ico">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lora|Oswald|Lato:400,300|Montserrat:700,400" rel="stylesheet">
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-        crossorigin="anonymous">
     <!-- Materialize CSS CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+    <style>
+        html {
+            overflow: hidden;
+        }
+
+        /* Preloader css begin */
+        .loader {
+            background: #222;
+            bottom: 0;
+            left: 0;
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 99999;
+            transition: 1s ease;
+            margin: -50px auto auto auto;
+        }
+
+        .loader-inner {
+            bottom: 0;
+            height: 60px;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100px;
+        }
+
+        .loader-line-wrap {
+            animation: spin 2000ms cubic-bezier(.175, .885, .32, 1.275) infinite;
+            box-sizing: border-box;
+            height: 50px;
+            left: 0;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            transform-origin: 50% 100%;
+            width: 100px;
+        }
+
+        .loader-line {
+            border: 4px solid transparent;
+            border-radius: 100%;
+            box-sizing: border-box;
+            height: 100px;
+            left: 0;
+            margin: 0 auto;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100px;
+        }
+
+        .loader-line-wrap:nth-child(1) {
+            animation-delay: -50ms;
+        }
+
+        .loader-line-wrap:nth-child(2) {
+            animation-delay: -100ms;
+        }
+
+        .loader-line-wrap:nth-child(3) {
+            animation-delay: -150ms;
+        }
+
+        .loader-line-wrap:nth-child(4) {
+            animation-delay: -200ms;
+        }
+
+        .loader-line-wrap:nth-child(5) {
+            animation-delay: -250ms;
+        }
+
+        .loader-line-wrap:nth-child(1) .loader-line {
+            border-color: hsl(0, 80%, 60%);
+            height: 90px;
+            width: 90px;
+            top: 7px;
+        }
+
+        .loader-line-wrap:nth-child(2) .loader-line {
+            border-color: hsl(60, 80%, 60%);
+            height: 76px;
+            width: 76px;
+            top: 14px;
+        }
+
+        .loader-line-wrap:nth-child(3) .loader-line {
+            border-color: hsl(120, 80%, 60%);
+            height: 62px;
+            width: 62px;
+            top: 21px;
+        }
+
+        .loader-line-wrap:nth-child(4) .loader-line {
+            border-color: hsl(180, 80%, 60%);
+            height: 48px;
+            width: 48px;
+            top: 28px;
+        }
+
+        .loader-line-wrap:nth-child(5) .loader-line {
+            border-color: hsl(240, 80%, 60%);
+            height: 34px;
+            width: 34px;
+            top: 35px;
+        }
+
+        @keyframes spin {
+
+            0%,
+            15% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        /* Preloader css end */
+        
+        nav {
+            transition: all 0.3s ease-out;
+            padding-top: 20px;
+            overflow: hidden;
+            background-color: transparent !important;
+        }
+
+        nav li>a {
+            font-family: 'Lato', sans-serif;
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 0 0;
+            margin: 0 20px;
+            height: 52px;
+        }
+
+        header {
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("{% static 'images/background.jpg' %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            position: fixed;
+            content: ' ';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            will-change: transform;
+            z-index: -1;
+        }
+
+        .centerDiv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #hero {
+            color: #fff;
+            height: calc(100vh - 84px);
+            width: 100%;
+            position: fixed;
+        }
+
+        #hero h1 {
+            margin: 3rem 0 3rem 0 !important;
+            font-size: 5rem;
+            font-weight: 900;
+        }
+
+        #type {
+            font-size: 1.4rem;
+            font-family: monospace;
+        }
+
+        .typed-cursor {
+            opacity: 1;
+            font-size: 1.5rem;
+            animation: blink .5s infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #hero ul {
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 40px;
+        }
+
+        #hero ul>li {
+            display: inline-block;
+            margin: 0 15px;
+            font-size: 4rem;
+        }
+
+        .zoomableLink {
+            color: #FFF;
+            display: inline-block;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #scroll-btn {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -368,6 +589,30 @@
     <script src="{% static 'js/typed.min.js' %}"></script>
     <!-- Custom Javascript File -->
     <script src="{% static 'js/app.js' %}"></script>
+    <noscript id="deferred-styles">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </noscript>
+    <script>
+        var loadDeferredStyles = function() {
+            var addStylesNode = document.getElementById("deferred-styles");
+            var replacement = document.createElement("div");
+            replacement.innerHTML = addStylesNode.textContent;
+            document.body.appendChild(replacement)
+            addStylesNode.parentElement.removeChild(addStylesNode);
+        };
+        var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+            window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+        if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+        else window.addEventListener('load', loadDeferredStyles);
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lora|Oswald|Lato:400,300|Montserrat:700,400" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    
 </body>
 
 </html>
