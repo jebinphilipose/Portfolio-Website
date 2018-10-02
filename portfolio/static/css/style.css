@@ -22,6 +22,10 @@ a {
     outline: none;
 }
 
+button::-moz-focus-inner {
+    border: 0;
+}
+
 #logo-image {
     height: 52px;
     width: 52px;
