@@ -112,10 +112,6 @@ $(document).ready(function () {
     }, function () {
         $(this).css('transform', 'scale(1)');
     });
-    // Stop resume link from doing anything
-    $('#resumeLink').click(function (e) {
-        e.preventDefault();
-    });
 });
 /* Script for animating social links end */
 
