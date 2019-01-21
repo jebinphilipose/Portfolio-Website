@@ -1,4 +1,4 @@
-# Portfolio Website ([Live](https://jebinphilipose.tech/))
+# Portfolio Website ([Live](https://jebinphilipose.me/))
 
 ### Jebin Philipose's personal portfolio website.
 
