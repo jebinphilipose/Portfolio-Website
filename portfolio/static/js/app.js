@@ -24,14 +24,13 @@ document.addEventListener('DOMContentLoaded', function () {
 $(window).on('load', function () {
     var typed = new Typed('#type', {
         strings: [
-            "Hi, I'm Jebin Philipose <span>&semi;)</span>",
-            "I am a computer science engineering student",
-            "I am a self-made Full Stack Web Developer",
-            "I love <i class='fas fa-code'></i>",
-            "Start scrolling to learn more about me",
+            "Full Stack Developer <i class='fa fa-code'></i>",
+            "ACM ICPC'18 Regionalist",
+            "Codechef CCDSAP Foundation Certified",
         ],
-        typeSpeed: 50,
+        typeSpeed: 40,
         backSpeed: 30,
+        backDelay: 1500,
         loop: true,
         loopCount: Infinity
     });

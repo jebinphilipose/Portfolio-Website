@@ -296,32 +296,8 @@ nav li>a.active {
 
 .input-field input.invalid~span,
 .input-field textarea.invalid~span {
-    font-size: 1.0rem !important;
+    font-size: 1.5rem !important;
 }
-
-/* For removing input background colour for autocomplete */
-@keyframes autofill {
-    to {
-        color: #FFF;
-        background: transparent;
-    }
-}
-
-@-webkit-keyframes autofill {
-    to {
-        color: #FFF;
-        background: transparent;
-    }
-}
-
-input:-webkit-autofill {
-    -webkit-animation-name: autofill;
-    -webkit-animation-fill-mode: both;
-    animation-name: autofill;
-    animation-fill-mode: both;
-}
-
-/* For removing input background colour for autocomplete */
 
 #flashClose:hover {
     cursor: pointer;

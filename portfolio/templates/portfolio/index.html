@@ -279,7 +279,7 @@
                                 <img src="{% static 'images/logo.png' %}" alt="logo" id="logo-image">
                             </a>
                             <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-med-and-up right" id="sidenav-hamburger">
-                                <i class="fas fa-bars" style="font-size: 30px;"></i>
+                                <i class="fa fa-bars" style="font-size: 30px;"></i>
                             </a>
                             <ul class="right hide-on-small-only">
                                 <li>
@@ -344,28 +344,28 @@
                         <div class="col s12">
                             <ul>
                                 <li>
-                                    <a href="https://github.com/jebinphilipose" target="_blank" class="zoomableLink">
-                                        <i class="fab fa-github"></i>
+                                    <a href="https://github.com/jebinphilipose" target="_blank" rel="noreferrer" class="zoomableLink">
+                                        <i class="fa fa-github"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://in.linkedin.com/in/jebin-philipose" target="_blank" class="zoomableLink">
-                                        <i class="fab fa-linkedin-in"></i>
+                                    <a href="https://in.linkedin.com/in/jebin-philipose" target="_blank" rel="noreferrer" class="zoomableLink">
+                                        <i class="fa fa-linkedin"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.facebook.com/philipose.jebin" target="_blank" class="zoomableLink">
-                                        <i class="fab fa-facebook"></i>
+                                    <a href="https://stackexchange.com/users/9958388/jebin-philipose?tab=accounts" target="_blank" rel="noreferrer" class="zoomableLink">
+                                        <i class="fa fa-stack-exchange"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.quora.com/profile/Jebin-Philipose" target="_blank" class="zoomableLink">
-                                        <i class="fab fa-quora"></i>
+                                    <a href="https://angel.co/u/jebinphilipose" target="_blank" rel="noreferrer" class="zoomableLink">
+                                        <i class="fa fa-angellist"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="mailto:jebinphilip24@gmail.com" target="_blank" class="zoomableLink">
-                                        <i class="fas fa-envelope"></i>
+                                    <a href="mailto:jebinphilip24@gmail.com" target="_blank" rel="noreferrer" class="zoomableLink">
+                                        <i class="fa fa-envelope"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -378,7 +378,7 @@
                                 <ul style="margin-top: -5px;">
                                     <li style="font-size: 2rem;">
                                         <a href="#about" class="center-align zoomableLink">
-                                            <i class="fas fa-chevron-circle-down"></i>
+                                            <i class="fa fa-chevron-circle-down"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -452,8 +452,8 @@
                                             <div class="card card-box" id="aboutLastBox">
                                                 <div class="card-content" style="background: #252934; color: #FFF; text-align: center;">
                                                     <h4 class="center-align inner-section-heading">Resume</h4>
-                                                    <a href="/static/pdf/CV_JEBIN_PHILIPOSE.pdf" target="_blank" class="zoomableLink">
-                                                        <i class="fas fa-download" style="font-size: 3rem;"></i>
+                                                    <a href="/static/pdf/CV_JEBIN_PHILIPOSE.pdf" target="_blank" rel="noreferrer" class="zoomableLink">
+                                                        <i class="fa fa-download" style="font-size: 3rem;"></i>
                                                     </a>
                                                 </div>
                                             </div>
@@ -479,12 +479,12 @@
                             <div class="carousel carousel-slider center " style="position: relative; min-height: calc(100vh - 190px);">
                                 <div class="carousel-fixed-item" id="carouselLeftButton">
                                     <a href="#" class="movePrevCarousel" style="font-size:2.5rem; color: white;">
-                                        <i class="fas fa-chevron-left"></i>
+                                        <i class="fa fa-chevron-left"></i>
                                     </a>
                                 </div>
                                 <div class="carousel-fixed-item" id="carouselRightButton">
                                     <a href="#" class="moveNextCarousel" style="font-size:2.5rem; color: white;">
-                                        <i class="fas fa-chevron-right"></i>
+                                        <i class="fa fa-chevron-right"></i>
                                     </a>
                                 </div>
                                 {% for project in projects %}
@@ -497,13 +497,13 @@
                                                 <button style="font-family: 'Lato', sans-serif;" class="ovalButton hide-on-small-only"
                                                     onclick="window.open('{{project.github_link}}')">
                                                     SEE PROJECT</button>
-                                                <a href="{{project.github_link}}" target="_blank" class="hide-on-med-and-up"
+                                                <a href="{{project.github_link}}" target="_blank" rel="noreferrer" class="hide-on-med-and-up"
                                                     style="margin: 0 5px;">
-                                                    <i class="fab fa-github circleIcon"></i>
+                                                    <i class="fa fa-github circleIcon"></i>
                                                 </a>
                                                 <a href="#modal{{project.pk}}" class="hide-on-med-and-up modal-trigger"
                                                     style="margin: 0 5px;">
-                                                    <i class="fas fa-info-circle circleIcon"></i>
+                                                    <i class="fa fa-info-circle circleIcon"></i>
                                                 </a>
                                             </div>
                                         </div>
@@ -538,21 +538,21 @@
                             <p style="font-family: 'Montserrat', sans-serif; color: aqua; margin-bottom: 3em; letter-spacing: 1px;">
                                 Have an idea or want to collaborate on an open source project?
                                 <br>
-                                I would <i style="color:red;" class="fas fa-heart blink"></i> to help!
+                                I would <i style="color:red;" class="fa fa-heart blink"></i> to help!
                                 <br>
                                 Fill up this form or find me through one of my social links and
                                 <br>
                                 ~ let's talk.
                             </p>
                             <div class="row">
-                                <form id="contactForm" class="col s12" method="POST" action="">
+                                <form id="contactForm" class="col s12" method="POST" action="" autocomplete="off">
                                     {% csrf_token %}
                                     <div class="row" id="inputDiv">
                                         {% for field in form %}
                                         <div class="input-field col s12">
                                             {{ field }}
                                             <label for="{{ field.id_for_label }}">{{ field.html_name|title }}</label>
-                                            <span class="helper-text" data-error="Invalid!" data-success="&#x2713;"></span>
+                                            <span class="helper-text" data-error="&#x2717;" data-success="&#x2713;"></span>
                                         </div>
                                         {% endfor %}
                                     </div>
@@ -578,7 +578,7 @@
         </div>
     </div>
     <footer style="background: #222;color: #9e9e9e;width: 100%;position: relative;text-align: center;">
-        <p style="font-family: 'Montserrat', sans-serif;">Made with <i style="color:red;" class="fas fa-heart blink"></i> and Django.<br>Jebin Philipose <i class="far fa-copyright"></i> {% now "Y" %} - All rights reserved.</p>
+        <p style="font-family: 'Montserrat', sans-serif;">Made with <i style="color:red;" class="fa fa-heart blink"></i> and Django<br>Jebin Philipose <i class="fa fa-copyright"></i> {% now "Y" %} - All rights reserved</p>
     </footer>
 
     <!-- jQuery CDN -->
@@ -611,8 +611,7 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lora|Oswald|Lato:400,300|Montserrat:700,400" rel="stylesheet">
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     
 </body>
 
