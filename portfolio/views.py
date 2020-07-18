@@ -2,15 +2,12 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from django.core.mail import send_mail
 from django.conf import settings
-from .models import Degree, Skill, Summary, Project
+from .models import Project
 from .forms import ContactForm
 
 
 def home(request):
-    skills = Skill.objects.all()
-    degrees = Degree.objects.all()
-    summary = Summary.objects.first()
-    projects = Project.objects.all()
+    projects = Project.objects.all().order_by('-created_date')
     form = ContactForm()
     if request.method == 'POST':
         form = ContactForm(request.POST)
@@ -38,8 +35,5 @@ def home(request):
                 'errors': form.errors,
             })
 
-    return render(request, 'portfolio/index.html', {'skills': skills,
-                                                    'degrees': degrees,
-                                                    'summary': summary,
-                                                    'projects': projects,
+    return render(request, 'portfolio/index.html', {'projects': projects,
                                                     'form': form})
