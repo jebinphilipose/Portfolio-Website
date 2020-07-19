@@ -156,28 +156,8 @@ nav li>a.active {
     background-color: #000 !important;
 }
 
-.carousel-fixed-item {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 4rem;
-    display: table;
-}
-
-#carouselRightButton {
-    left: unset !important;
-}
-
-.carouselBox {
-    width: 80%;
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-}
-
-.carousel-item {
-    height: 100% !important;
+.carousel.carousel-slider .carousel-item {
+  min-height: auto;
 }
 
 .imageHoverShow {
@@ -324,10 +304,6 @@ footer {
 
     .section-heading {
         font-size: 4.2rem;
-    }
-
-    .carouselBox>p {
-        font-size: 1.6rem !important;
     }
 
     #contactHeading {

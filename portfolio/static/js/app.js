@@ -118,7 +118,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('.carousel.carousel-slider').carousel({
         fullWidth: true,
-        indicators: false,
+        indicators: true,
     });
 
     $('.moveNextCarousel').click(function (e) {
