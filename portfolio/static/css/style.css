@@ -215,6 +215,11 @@ nav li>a.active {
     background: #757575;
 }
 
+.modal {
+    top: 0% !important;
+    max-height: 100% !important;
+}
+
 .modal-overlay {
     background: transparent !important;
 }
