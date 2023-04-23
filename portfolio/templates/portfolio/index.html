@@ -72,55 +72,11 @@
             animation-delay: -50ms;
         }
 
-        .loader-line-wrap:nth-child(2) {
-            animation-delay: -100ms;
-        }
-
-        .loader-line-wrap:nth-child(3) {
-            animation-delay: -150ms;
-        }
-
-        .loader-line-wrap:nth-child(4) {
-            animation-delay: -200ms;
-        }
-
-        .loader-line-wrap:nth-child(5) {
-            animation-delay: -250ms;
-        }
-
         .loader-line-wrap:nth-child(1) .loader-line {
-            border-color: hsl(0, 80%, 60%);
+            border-color: #FFF;
             height: 90px;
             width: 90px;
             top: 7px;
-        }
-
-        .loader-line-wrap:nth-child(2) .loader-line {
-            border-color: hsl(60, 80%, 60%);
-            height: 76px;
-            width: 76px;
-            top: 14px;
-        }
-
-        .loader-line-wrap:nth-child(3) .loader-line {
-            border-color: hsl(120, 80%, 60%);
-            height: 62px;
-            width: 62px;
-            top: 21px;
-        }
-
-        .loader-line-wrap:nth-child(4) .loader-line {
-            border-color: hsl(180, 80%, 60%);
-            height: 48px;
-            width: 48px;
-            top: 28px;
-        }
-
-        .loader-line-wrap:nth-child(5) .loader-line {
-            border-color: hsl(240, 80%, 60%);
-            height: 34px;
-            width: 34px;
-            top: 35px;
         }
 
         @keyframes spin {
@@ -397,7 +353,7 @@
                         <div class="col s12">
                             <img class="responsive-img" src="{% static 'images/jebin.jpg' %}" alt="Jebin Philipose" id="circle-img">
                             <h5>Hi, I'm Jebin Philipose!</h5>
-                            <p>I'm a software engineer with experience in designing and building API services, working with databases, designing responsive front-end, and hosting applications in the cloud. I'm driven by my passion for understanding what it takes to build large scale applications. I consider myself a 'lifelong learner' eager to both build on my academic foundations in Computer Science and Engineering and stay in tune with the latest technologies through continued coursework. I also read on finance and personal growth. While I'm not coding, I love to explore and travel new places, listen to music, cooking, and photography.</p>
+                            <p>I'm a software engineer with experience in designing and building API services, working with databases, designing responsive front-end, and hosting applications in the cloud. I'm driven by my passion for understanding what it takes to build large scale applications. I consider myself a 'lifelong learner' eager to both build on my academic foundations in Computer Science and Engineering and stay in tune with the latest technologies through continued coursework. I also read on finance and personal growth. While I am not coding, I love traveling to new places, listening to music, and clicking pictures.</p>
                             <p>Please feel free to reach out to me at <a href="mailto:jebinphilip24@gmail.com" style="color: #ffd300;">jebinphilip24@gmail.com</a> to connect.</p>
                         </div>
                     </div>
@@ -473,7 +429,11 @@
                                         {% for field in form %}
                                         <div class="input-field col s12">
                                             {{ field }}
+                                            {% if field.html_name == 'captcha' %}
+                                            <input type="hidden" name="captcha" required id="id_captcha">
+                                            {% else %}
                                             <label for="{{ field.id_for_label }}">{{ field.html_name|title }}</label>
+                                            {% endif %}
                                             <span class="helper-text" data-error="&#x2717;" data-success="&#x2713;"></span>
                                         </div>
                                         {% endfor %}

@@ -156,6 +156,7 @@ $(document).ready(function () {
         e.preventDefault()
         var $formData = $(this).serialize()
         var $thisURL = window.location.href
+        $(`.input-field span.helper-text`).text('');
         $.ajax({
             method: "POST",
             url: $thisURL,
